@@ -8,7 +8,7 @@ public class DatabaseConnection {
 		
 		try {
 			Connection myConnection = DriverManager.getConnection("jdbc:mysql://localhost/projectdatabase?"
-					+ "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","TKpa55w0rd");
+					+ "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","password");
 			Statement myStatement = myConnection.createStatement();
 			ResultSet myResult = myStatement.executeQuery("select * from pracownicy");
 			while(myResult.next()) {

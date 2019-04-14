@@ -48,10 +48,11 @@ public class UserInterface extends JFrame {
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
-			
+			DatabaseConnection dbConn = new DatabaseConnection();
 			@Override
 			public void run() {
 				new UserInterface();
+				dbConn.queryExecution();
 			}
 		});
 	}
